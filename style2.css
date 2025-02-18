@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'teko', sans-serif;        
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+.card {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid red;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-image: url('https://www.motortrend.com/files/661fed9cfceecf0008b212e4/001-2025-toyota-camry-se-awd-lead.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.card h2 {
+    font-family: 'Space+Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 0 10px 0;
+}
+.card p {
+    font-size: 15px;
+    color:aqua;
+    line-height: 1.5;
+    margin: 0;
+    
+}
+.badge {
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 59, 48, 0.9); /* RGB with transparency */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 10;
+}
+/* Responsive behavior */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .badge {
+        font-size: 10px;
+    }
+}
