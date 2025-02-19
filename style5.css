@@ -1,0 +1,93 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Gallery Layout */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.gallery-item {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Background Images for Each Item */
+.gallery-item:nth-child(1) {
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/029/470/675/small_2x/ai-generated-ai-generative-purple-pink-color-sunset-evening-nature-outdoor-lake-with-mountains-landscape-background-graphic-art-photo.jpg');
+}
+
+.gallery-item:nth-child(2) {
+  background-image: url('https://www.creativefabrica.com/wp-content/uploads/2020/03/14/Background-City-with-beautiful-sun-Graphics-3644955-1.jpg');
+}
+
+.gallery-item:nth-child(3) {
+  background-image: url('https://static.vecteezy.com/system/resources/thumbnails/023/790/661/small_2x/beautiful-lake-under-the-mountains-ai-generated-photo.jpg');
+}
+
+.gallery-item:nth-child(4) {
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVB9KPq8pRjK80XyAHIkglLjTYbMfUSDdNJg&s');
+}
+.gallery-item:nth-child(5) {
+  background-image: url('https://wallpapers.com/images/featured/outer-space-3pae4flbryaputyl.jpg');
+}
+.gallery-item:nth-child(6) {
+    background-image: url('https://wallpapercat.com/w/full/2/1/5/195372-2160x3840-iphone-4k-outer-space-background.jpg');
+  }
+
+/* Hover Effects */
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+  opacity: 1;
+}
+
+/* Caption Styling */
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .caption {
+  opacity: 1;
+}
